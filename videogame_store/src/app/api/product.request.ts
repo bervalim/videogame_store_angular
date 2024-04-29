@@ -13,4 +13,8 @@ export class ProductRequest {
   getTechProductsListRequest() {
     return this.http.get<IProduct[]>(`${this.BASE_URL}/product`);
   }
+
+  getTechProductRequest(id: string) {
+    return this.http.get<IProduct>(`${this.BASE_URL}/product/${id}`);
+  }
 }
