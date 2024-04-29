@@ -1,1 +1,20 @@
-<p>product-list works!</p>
+<section>
+  <h2>{{ title }}</h2>
+  <ul>
+    <li *ngFor="let product of productList">
+      <img [src]="product.image" [alt]="product.name" />
+      <h3>{{ product.name }}</h3>
+      <span>{{
+        product.price.toLocaleString("pt-BR", {
+          style: "currency",
+          currency: "BRL"
+        })
+      }}</span>
+      <p>{{ product.description }}</p>
+      <div>
+        <button>Carrinho</button>
+        <button>Saiba mais</button>
+      </div>
+    </li>
+  </ul>
+</section>
