@@ -24,13 +24,14 @@ export class CartService {
   addProductToCart(product: IProduct) {
     if (
       !this.cartProductListSignal().some(
-        (cartProduct) => cartProduct.id !== product.id
+        (cartProduct) => cartProduct.id === product.id
       )
     ) {
       this.cartProductListSignal.update((cartProductList) => [
         ...cartProductList,
         product,
       ]);
+      alert('Produto adicionado ao carrinho!');
       this.setIsCartOpen(true);
     } else {
       alert('Este produto já foi adicionado ao carrinho!!!');
