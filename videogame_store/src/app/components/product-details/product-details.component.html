@@ -1,1 +1,22 @@
-<p>product-details works!</p>
+<section>
+  <div *ngIf="product">
+    <p><a routerLink="/">Home</a> > {{ product.name }}</p>
+    <div>
+      <div>
+        <img [src]="product.image" [alt]="product.name" />
+      </div>
+      <div>
+        <h3>{{ product.name }}</h3>
+        <span>{{
+          product.price.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+          })
+        }}</span>
+        <p>{{ product.description }}</p>
+        <button>ADICIONAR AO CARRINHO</button>
+      </div>
+    </div>
+  </div>
+  <p *ngIf="!product">Carregando...</p>
+</section>
