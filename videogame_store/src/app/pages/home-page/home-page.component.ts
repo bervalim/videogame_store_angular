@@ -2,11 +2,12 @@ import { Component, signal } from '@angular/core';
 import { ProductRequest } from '../../api/product.request';
 import { IProduct } from '../../../interfaces/product.interface';
 import { ProductListComponent } from '../../components/product-list/product-list.component';
+import { HeroSectionComponent } from '../../components/hero-section/hero-section.component';
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [ProductListComponent],
+  imports: [ProductListComponent, HeroSectionComponent],
   providers: [ProductRequest],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss',
