@@ -13,7 +13,7 @@
       <p>{{ product.description }}</p>
       <div>
         <button>Carrinho</button>
-        <button>Saiba mais</button>
+        <a [routerLink]="redirectURL(product.id)">Saiba mais</a>
       </div>
     </li>
   </ul>
