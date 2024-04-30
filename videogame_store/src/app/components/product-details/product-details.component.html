@@ -14,7 +14,9 @@
           })
         }}</span>
         <p>{{ product.description }}</p>
-        <button>ADICIONAR AO CARRINHO</button>
+        <button (click)="handleAddProductToCart(product)">
+          ADICIONAR AO CARRINHO
+        </button>
       </div>
     </div>
   </div>
