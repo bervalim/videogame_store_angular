@@ -1,6 +1,6 @@
 <section>
   <div *ngIf="product">
-    <p><a>Home</a> > {{ product.name }}</p>
+    <p><a routerLink="/">Home</a> > {{ product.name }}</p>
     <div>
       <div>
         <img [src]="product.image" [alt]="product.name" />
