@@ -1,1 +1,9 @@
-<p>cart-modal works!</p>
+<div *ngIf="isCartOpen">
+  <div role="dialog">
+    <div>
+      <h3>CARRINHO</h3>
+      <button (click)="handleCloseModal()">Fechar</button>
+    </div>
+    <app-cart-product-list></app-cart-product-list>
+  </div>
+</div>
