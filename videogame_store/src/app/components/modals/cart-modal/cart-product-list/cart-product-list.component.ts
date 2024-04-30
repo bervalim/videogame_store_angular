@@ -19,4 +19,10 @@ export class CartProductListComponent {
   get cartProductList() {
     return this.cartService.getCartProductList();
   }
+
+  get totalSum() {
+    return this.cartProductList.reduce((prevValue, currentValue) => {
+      return prevValue + currentValue.price;
+    }, 0);
+  }
 }
