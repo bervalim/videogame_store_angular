@@ -2,11 +2,12 @@ import { Component, signal } from '@angular/core';
 import { ProductRequest } from '../../api/product.request';
 import { IProduct } from '../../../interfaces/product.interface';
 import { ActivatedRoute } from '@angular/router';
+import { ProductListComponent } from '../../components/product-list/product-list.component';
 
 @Component({
   selector: 'app-product-page',
   standalone: true,
-  imports: [],
+  imports: [ProductListComponent],
   providers: [ProductRequest],
   templateUrl: './product-page.component.html',
   styleUrl: './product-page.component.scss',
