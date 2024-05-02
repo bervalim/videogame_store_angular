@@ -1,0 +1,12 @@
+:root {
+  --font-primary:"Oswald", sans-serif
+  --font-secondary:"Roboto",sans-serif
+  --color-blue: #55a3ff;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-grey: #f3f3f3;
+}
+
+body{
+  background-color: var(--color-grey);
+}

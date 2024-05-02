@@ -15,6 +15,7 @@ import { ProductDetailsComponent } from '../../components/product-details/produc
 })
 export class ProductPageComponent {
   readonly productListSignal = signal<IProduct[]>([]);
+
   constructor(
     private productRequest: ProductRequest,
     private route: ActivatedRoute
