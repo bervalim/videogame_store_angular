@@ -15,4 +15,8 @@ export class HeaderComponent {
   handleOpenModal() {
     return this.cartService.setIsCartOpen(true);
   }
+
+  get productListLength() {
+    return this.cartService.getCartProductList().length;
+  }
 }
