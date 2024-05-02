@@ -9,6 +9,21 @@ export class CartService {
 
   readonly cartProductListSignal = signal<IProduct[]>([]);
 
+  private setCartListToLocalStorage(cartList: IProduct[]) {
+    if (cartList.length > 0) {
+      localStorage.setItem('@VSCart', JSON.stringify(cartList));
+    } else {
+      localStorage.removeItem('@VSCart');
+    }
+  }
+
+  constructor() {
+    const getItem = localStorage.getItem('@VSCart');
+    if (getItem) {
+      this.cartProductListSignal.set(JSON.parse(getItem));
+    }
+  }
+
   getIsCartOpen() {
     return this.isCartOpenSignal();
   }
@@ -27,10 +42,11 @@ export class CartService {
         (cartProduct) => cartProduct.id === product.id
       )
     ) {
-      this.cartProductListSignal.update((cartProductList) => [
-        ...cartProductList,
-        product,
-      ]);
+      this.cartProductListSignal.update((cartProductList) => {
+        const newList = [...cartProductList, product];
+        this.setCartListToLocalStorage(newList);
+        return newList;
+      });
       alert('Produto adicionado ao carrinho!');
       this.setIsCartOpen(true);
     } else {
@@ -39,8 +55,13 @@ export class CartService {
   }
 
   removeProductFromCart(id: string) {
-    this.cartProductListSignal.update((cartProductList) =>
-      cartProductList.filter((product) => product.id !== id)
-    );
+    this.cartProductListSignal.update((cartProductList) => {
+      const updatedCartList = cartProductList.filter(
+        (product) => product.id !== id
+      );
+      this.cartProductListSignal.set(updatedCartList);
+      this.setCartListToLocalStorage(updatedCartList);
+      return updatedCartList;
+    });
   }
 }
