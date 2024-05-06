@@ -1,0 +1,60 @@
+.title {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  color: var(--color-blue);
+
+  &.one {
+    font-size: clamp(2.1875rem, 4vw, 2.8125rem);
+  }
+
+  &.two {
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
+  }
+
+  &.three {
+    font-size: clamp(0.8125rem, 4vw, 1.125rem);
+    color: var(--color-black);
+    font-family: var(--font-secondary);
+    font-weight: 700;
+  }
+
+  &.four {
+    color: var(--color-black);
+    font-weight: 700;
+    font-size: clamp(15px, 4vw, 18px);
+  }
+
+  &.price {
+    font-weight: 400;
+    font-size: clamp(0.6875rem, 4vw, 1rem);
+  }
+
+  &.price-bg {
+    font-size: clamp(18px, 4vw, 21px);
+    font-weight: 400;
+  }
+
+  &.cta {
+    color: var(--color-black);
+    font-family: var(--font-secondary);
+    font-size: clamp(0.5625rem, 4vw, 0.6875rem);
+  }
+
+  &.breadcrumb {
+    font-weight: 500;
+    font-size: clamp(11px, 4vw, 13px);
+    color: var(--color-black);
+  }
+}
+
+.paragraph {
+  font-weight: 400;
+  font-size: clamp(12px, 4vw, 16px);
+  color: var(--color-black);
+  font-family: var(--font-secondary);
+
+  &.footer {
+    font-weight: 700;
+    font-size: clamp(12px, 4vw, 16px);
+  }
+}
