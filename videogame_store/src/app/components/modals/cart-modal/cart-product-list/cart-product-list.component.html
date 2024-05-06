@@ -20,7 +20,9 @@
       </div>
     </li>
   </ul>
-  <p *ngIf="cartProductList.length === 0">O carrinho está vazio</p>
+  <p class="title four" *ngIf="cartProductList.length === 0">
+    O carrinho está vazio
+  </p>
   <div>
     <p class="paragraph footer">Total:</p>
     <span class="title price">{{

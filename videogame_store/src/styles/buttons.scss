@@ -1,0 +1,30 @@
+%buttonDefaults {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-secondary);
+  font-size: clamp(0.5rem, 3vw, 0.875rem);
+  font-weight: 500;
+  transition: 0.4s;
+  border: 1px solid;
+  border-radius: 255px;
+}
+
+.btn-black {
+  border: 1px solid var(--color-black);
+  height: 30px;
+  padding: 0 23px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+
+  &.hover {
+    filter: brightness(1.2);
+  }
+
+  &.outline {
+    border: outline;
+    background-color: var(--color-white);
+    color: var(--color-blue);
+  }
+}
