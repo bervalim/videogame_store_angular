@@ -7,24 +7,30 @@
   font-size: clamp(0.5rem, 3vw, 0.875rem);
   font-weight: 500;
   transition: 0.4s;
-  border: 1px solid;
-  border-radius: 255px;
+  border-radius: 3px;
 }
 
-.btn-black {
-  border: 1px solid var(--color-black);
+.btn-blue {
+  @extend %buttonDefaults;
+  border: 1px solid #55a3ff;
   height: 30px;
-  padding: 0 23px;
-  background-color: var(--color-black);
+  padding: 0 25px;
+  background-color: #55a3ff;
   color: var(--color-white);
 
   &.hover {
     filter: brightness(1.2);
   }
+}
 
-  &.outline {
-    border: outline;
-    background-color: var(--color-white);
-    color: var(--color-blue);
+.anchor {
+  @extend %buttonDefaults;
+  color: #55a3ff;
+  border: none;
+  font-size: clamp(0.8rem, 3vw, 0.98rem);
+
+  &:hover {
+    text-decoration: underline;
+    color: #55a3ff;
   }
 }
