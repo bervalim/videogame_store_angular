@@ -1,0 +1,36 @@
+%buttonDefaults {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-secondary);
+  font-size: clamp(0.5rem, 3vw, 0.875rem);
+  font-weight: 500;
+  transition: 0.4s;
+  border-radius: 3px;
+}
+
+.btn-blue {
+  @extend %buttonDefaults;
+  border: 1px solid #55a3ff;
+  height: 30px;
+  padding: 0 25px;
+  background-color: #55a3ff;
+  color: var(--color-white);
+
+  &.hover {
+    filter: brightness(1.2);
+  }
+}
+
+.anchor {
+  @extend %buttonDefaults;
+  color: #55a3ff;
+  border: none;
+  font-size: clamp(0.8rem, 3vw, 0.98rem);
+
+  &:hover {
+    text-decoration: underline;
+    color: #55a3ff;
+  }
+}
