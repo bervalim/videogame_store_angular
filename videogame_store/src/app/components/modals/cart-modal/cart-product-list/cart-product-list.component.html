@@ -4,8 +4,8 @@
       <img [src]="product.image" [alt]="product.name" />
       <div>
         <div>
-          <h3>{{ product.name }}</h3>
-          <span>{{
+          <h3 class="title three">{{ product.name }}</h3>
+          <span class="title price">{{
             product.price.toLocaleString("pt-BR", {
               style: "currency",
               currency: "BRL"
@@ -22,8 +22,8 @@
   </ul>
   <p *ngIf="cartProductList.length === 0">O carrinho está vazio</p>
   <div>
-    <p>Total:</p>
-    <span>{{
+    <p class="paragraph footer">Total:</p>
+    <span class="title price">{{
       totalSum.toLocaleString("pt-BR", {
         style: "currency",
         currency: "BRL"

@@ -1,19 +1,22 @@
 <section>
   <div *ngIf="product">
-    <p><a routerLink="/">Home</a> > {{ product.name }}</p>
+    <p class="title cta">
+      <a class="title cta" routerLink="/">HOME</a> >
+      {{ product.name.toUpperCase() }}
+    </p>
     <div>
       <div>
         <img [src]="product.image" [alt]="product.name" />
       </div>
       <div>
-        <h3>{{ product.name }}</h3>
-        <span>{{
+        <h3 class="title four">{{ product.name }}</h3>
+        <span class="title price-bg">{{
           product.price.toLocaleString("pt-BR", {
             style: "currency",
             currency: "BRL"
           })
         }}</span>
-        <p>{{ product.description }}</p>
+        <p class="paragraph">{{ product.description }}</p>
         <button (click)="handleAddProductToCart(product)">
           ADICIONAR AO CARRINHO
         </button>

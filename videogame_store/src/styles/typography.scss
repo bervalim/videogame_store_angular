@@ -1,7 +1,7 @@
 .title {
   font-family: var(--font-primary);
   font-weight: 500;
-  color: var(--color-blue);
+  color: #55a3ff;
 
   &.one {
     font-size: clamp(2.1875rem, 4vw, 2.8125rem);
@@ -19,6 +19,7 @@
   }
 
   &.four {
+    font-family: var(--font-secondary);
     color: var(--color-black);
     font-weight: 700;
     font-size: clamp(15px, 4vw, 18px);
@@ -36,8 +37,9 @@
 
   &.cta {
     color: var(--color-black);
+    font-weight: 700;
     font-family: var(--font-secondary);
-    font-size: clamp(0.5625rem, 4vw, 0.6875rem);
+    font-size: clamp(0.6875rem, 4vw, 0.875rem);
   }
 
   &.breadcrumb {
@@ -52,9 +54,17 @@
   font-size: clamp(12px, 4vw, 16px);
   color: var(--color-black);
   font-family: var(--font-secondary);
+  line-height: 28px;
 
   &.footer {
     font-weight: 700;
     font-size: clamp(12px, 4vw, 16px);
   }
+}
+
+.modal {
+  font-size: clamp(0.9375rem, 4vw, 1.125rem);
+  font-weight: 700;
+  font-family: var(--font-primary);
+  color: #55a3ff;
 }
