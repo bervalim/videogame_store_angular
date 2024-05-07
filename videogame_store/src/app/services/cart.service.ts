@@ -1,5 +1,6 @@
 import { Injectable, signal } from '@angular/core';
 import { IProduct } from '../../interfaces/product.interface';
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable({
   providedIn: 'root',
@@ -17,7 +18,7 @@ export class CartService {
     }
   }
 
-  constructor() {
+  constructor(private toastr: ToastrService) {
     const getItem = localStorage.getItem('@VSCart');
     if (getItem) {
       this.cartProductListSignal.set(JSON.parse(getItem));
@@ -47,10 +48,10 @@ export class CartService {
         this.setCartListToLocalStorage(newList);
         return newList;
       });
-      alert('Produto adicionado ao carrinho!');
+      this.toastr.success('Produto adicionado ao carrinho com sucesso!');
       this.setIsCartOpen(true);
     } else {
-      alert('Este produto já foi adicionado ao carrinho!!!');
+      this.toastr.error('Este produto já foi adicionado ao carrinho!!!');
     }
   }
 
@@ -61,6 +62,7 @@ export class CartService {
       );
       this.cartProductListSignal.set(updatedCartList);
       this.setCartListToLocalStorage(updatedCartList);
+      this.toastr.success('Produto removido do carrinho com sucesso!!!');
       return updatedCartList;
     });
   }
