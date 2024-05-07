@@ -14,7 +14,7 @@
   @extend %buttonDefaults;
   border: 1px solid #55a3ff;
   height: 30px;
-  padding: 0 25px;
+  padding: 0 20px;
   background-color: #55a3ff;
   color: var(--color-white);
 
@@ -25,12 +25,13 @@
 
 .anchor {
   @extend %buttonDefaults;
-  color: #55a3ff;
+  color: var(--color-black);
   border: none;
   font-size: clamp(0.8rem, 3vw, 0.98rem);
+  text-transform: uppercase;
 
   &:hover {
     text-decoration: underline;
-    color: #55a3ff;
+    color: var(--color-black);
   }
 }
