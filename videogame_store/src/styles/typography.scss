@@ -4,15 +4,15 @@
   color: #55a3ff;
 
   &.one {
-    font-size: clamp(3.2rem, 5vw, 6.6rem);
+    font-size: clamp(3.2rem, 5vw, 6.5rem);
   }
 
   &.two {
-    font-size: clamp(1.35rem, 4vw, 1.9rem);
+    font-size: clamp(1.8rem, 5vw, 2rem);
   }
 
   &.three {
-    font-size: clamp(0.8125rem, 4vw, 1.125rem);
+    font-size: clamp(1rem, 5vw, 1.5rem);
     color: var(--color-black);
     font-family: var(--font-secondary);
     font-weight: 700;
@@ -27,7 +27,7 @@
 
   &.price {
     font-weight: 400;
-    font-size: clamp(0.6875rem, 4vw, 1rem);
+    font-size: clamp(0.9rem, 5vw, 1.2rem);
   }
 
   &.price-bg {

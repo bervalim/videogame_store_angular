@@ -1,7 +1,7 @@
-<section id="products">
+<section class="product_list" id="products">
   <div class="container">
     <h2 class="title two">{{ title }}</h2>
-    <ul>
+    <ul class="products">
       <li *ngFor="let product of productList">
         <img [src]="product.image" [alt]="product.name" />
         <h3 class="title three">{{ product.name }}</h3>
@@ -11,8 +11,12 @@
             currency: "BRL"
           })
         }}</span>
-        <div>
-          <button class="btn-blue" (click)="handleAddProductToCart(product)">
+        <div class="flex_buttons">
+          <button
+            id="btn-cart"
+            class="btn-blue"
+            (click)="handleAddProductToCart(product)"
+          >
             <span class="material-icons"> add_shopping_cart </span>
           </button>
           <a class="anchor" [routerLink]="redirectURL(product.id)"

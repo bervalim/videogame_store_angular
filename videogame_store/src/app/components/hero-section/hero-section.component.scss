@@ -1,7 +1,7 @@
 .flexbox {
   img {
     width: 100%;
-    max-width: 750px;
+    max-width: 790px;
     border-radius: 40px;
   }
 
@@ -26,16 +26,16 @@
     }
   }
 
-  @media (min-width: 1100px) {
+  @media (min-width: 1150px) {
     flex-direction: row;
-    gap: 39px;
+    gap: 80px;
 
     .rigth {
-      width: 68%;
+      width: 74%;
     }
 
     .flexbox_name {
-      width: 24%;
+      width: 22%;
       a {
         margin-top: 50px;
       }
