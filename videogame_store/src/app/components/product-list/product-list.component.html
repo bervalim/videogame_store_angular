@@ -11,8 +11,8 @@
         })
       }}</span>
       <div>
-        <button (click)="handleAddProductToCart(product)">
-          Adicionar ao Carrinho
+        <button class="btn-blue" (click)="handleAddProductToCart(product)">
+          <span class="material-icons"> add_shopping_cart </span>
         </button>
         <a class="anchor" [routerLink]="redirectURL(product.id)">Saiba mais</a>
       </div>
