@@ -1,21 +1,25 @@
 <section id="products">
-  <h2 class="title two">{{ title }}</h2>
-  <ul>
-    <li *ngFor="let product of productList">
-      <img [src]="product.image" [alt]="product.name" />
-      <h3 class="title three">{{ product.name }}</h3>
-      <span class="title price">{{
-        product.price.toLocaleString("pt-BR", {
-          style: "currency",
-          currency: "BRL"
-        })
-      }}</span>
-      <div>
-        <button class="btn-blue" (click)="handleAddProductToCart(product)">
-          <span class="material-icons"> add_shopping_cart </span>
-        </button>
-        <a class="anchor" [routerLink]="redirectURL(product.id)">Saiba mais</a>
-      </div>
-    </li>
-  </ul>
+  <div class="container">
+    <h2 class="title two">{{ title }}</h2>
+    <ul>
+      <li *ngFor="let product of productList">
+        <img [src]="product.image" [alt]="product.name" />
+        <h3 class="title three">{{ product.name }}</h3>
+        <span class="title price">{{
+          product.price.toLocaleString("pt-BR", {
+            style: "currency",
+            currency: "BRL"
+          })
+        }}</span>
+        <div>
+          <button class="btn-blue" (click)="handleAddProductToCart(product)">
+            <span class="material-icons"> add_shopping_cart </span>
+          </button>
+          <a class="anchor" [routerLink]="redirectURL(product.id)"
+            >Saiba mais</a
+          >
+        </div>
+      </li>
+    </ul>
+  </div>
 </section>
