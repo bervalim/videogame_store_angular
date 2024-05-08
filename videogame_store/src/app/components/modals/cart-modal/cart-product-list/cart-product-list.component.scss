@@ -43,3 +43,11 @@
   gap: 8px;
   align-items: center;
 }
+.empty_cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.empty_cart > p {
+  margin-top: 280px;
+}
