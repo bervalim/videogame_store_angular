@@ -1,8 +1,8 @@
-<div>
-  <ul *ngIf="cartProductList.length > 0">
-    <li *ngFor="let product of cartProductList">
+<div class="cart-box">
+  <ul class="productList" *ngIf="cartProductList.length > 0">
+    <li class="productItem" *ngFor="let product of cartProductList">
       <img [src]="product.image" [alt]="product.name" />
-      <div>
+      <div class="flexbox">
         <div>
           <h3 class="title three">{{ product.name }}</h3>
           <span class="title price">{{
@@ -23,7 +23,7 @@
   <p class="title four" *ngIf="cartProductList.length === 0">
     O carrinho está vazio
   </p>
-  <div>
+  <div class="totalPrice">
     <p class="paragraph footer">Total:</p>
     <span class="title price">{{
       totalSum.toLocaleString("pt-BR", {
