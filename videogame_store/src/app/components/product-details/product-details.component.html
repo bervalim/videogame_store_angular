@@ -1,17 +1,19 @@
 <section>
   <div *ngIf="product">
     <div class="container md">
-      <p class="title cta">
-        <a class="title cta" routerLink="/">HOME</a> >
-        {{ product.name.toUpperCase() }}
-      </p>
-      <div>
-        <div>
+      <div class="flexbox__anchors">
+        <p class="title cta">
+          <a class="title cta" routerLink="/">HOME</a> >
+          {{ product.name.toUpperCase() }}
+        </p>
+      </div>
+      <div class="flexbox">
+        <div class="left">
           <img [src]="product.image" [alt]="product.name" />
         </div>
-        <div>
+        <div class="rigth">
           <h3 class="title four">{{ product.name }}</h3>
-          <span class="title price-bg">{{
+          <span id="price" class="title price-bg">{{
             product.price.toLocaleString("pt-BR", {
               style: "currency",
               currency: "BRL"
@@ -26,5 +28,7 @@
       </div>
     </div>
   </div>
-  <p *ngIf="!product">Carregando...</p>
+  <p *ngIf="!product">
+    <app-animation></app-animation>
+  </p>
 </section>

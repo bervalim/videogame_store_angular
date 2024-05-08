@@ -4,11 +4,12 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { IProduct } from '../../../interfaces/product.interface';
 import { CommonModule } from '@angular/common';
 import { CartService } from '../../services/cart.service';
+import { AnimationComponent } from '../animation/animation.component';
 
 @Component({
   selector: 'app-product-details',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, AnimationComponent],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.scss',
 })
