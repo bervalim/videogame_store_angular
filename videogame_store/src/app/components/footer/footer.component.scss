@@ -1,0 +1,11 @@
+footer {
+  margin-top: clamp(28px, 5vw, 20px);
+  padding: 15px 0;
+  background-color: var(--color-white);
+
+  .flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

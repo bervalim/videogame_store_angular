@@ -1,0 +1,34 @@
+<section>
+  <div *ngIf="product">
+    <div class="container md">
+      <div class="flexbox__anchors">
+        <p class="title cta">
+          <a class="title cta" routerLink="/">HOME</a> >
+          {{ product.name.toUpperCase() }}
+        </p>
+      </div>
+      <div class="flexbox">
+        <div class="left">
+          <img [src]="product.image" [alt]="product.name" />
+        </div>
+        <div class="rigth">
+          <h3 class="title four">{{ product.name }}</h3>
+          <span id="price" class="title price-bg">{{
+            product.price.toLocaleString("pt-BR", {
+              style: "currency",
+              currency: "BRL"
+            })
+          }}</span>
+          <p class="paragraph">{{ product.description }}</p>
+          <button class="btn-blue" (click)="handleAddProductToCart(product)">
+            <span class="material-icons"> add_shopping_cart </span>ADICIONAR AO
+            CARRINHO
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p *ngIf="!product">
+    <app-animation></app-animation>
+  </p>
+</section>

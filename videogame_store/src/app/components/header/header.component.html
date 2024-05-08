@@ -1,0 +1,17 @@
+<header>
+  <div class="container">
+    <div class="position">
+      <div class="flexbox">
+        <a routerLink="/">
+          <img src="../../../assets/logoVDStore.png" alt="logo" />
+        </a>
+        <button (click)="handleOpenModal()">
+          <span class="material-icons">shopping_cart</span>
+          <div class="product_lenth_div">
+            <span class="product-length">{{ productListLength }}</span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

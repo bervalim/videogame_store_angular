@@ -1,0 +1,9 @@
+<div class="modalOverlay" *ngIf="isCartOpen">
+  <div class="modalBox" role="dialog">
+    <h3 class="modal">CARRINHO</h3>
+    <button class="buttonClose" (click)="handleCloseModal()">
+      <span class="material-icons">close</span>
+    </button>
+    <app-cart-product-list></app-cart-product-list>
+  </div>
+</div>
